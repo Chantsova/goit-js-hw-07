@@ -1,16 +1,29 @@
-const counterValue = document.getElementById('#value');
-const increaseBtn = document.querySelector('[data-action="increment"]');
-const decreaseBtn = document.querySelector('[data-action="decrement"]');
+const counterValue = document.querySelector('#value');
+const increment = document.querySelector('[data-action="increment"]');
+const decrement = document.querySelector('[data-action="decrement"]');
+let result=0;
 
-let result = 0;
-
-increaseBtn.addEventListener('click', () => {
-    result +=1;
-    console.log(result)
+increment.addEventListener('click', () => {
+    result++;
+    increment.addEventListener('click', (onResultSpan));
 });
 
-decreaseBtn.addEventListener('click', () => {
-    result -=1;
-    console.log(result)
+decrement.addEventListener('click', () => {
+   result--;  
+   decrement.addEventListener('click', (onResultSpan));
 });
-                                                                                                                                                                                                                            
+
+function onResultSpan () {
+counterValue.innerHTML = result;
+}
+
+// Оно работает, но по условию отдельно нужно слушатель на обновление интерфейса. Почему?
+//increaseBtn.addEventListener('click', () => {
+//     result++;
+//     counterValue.innerHTML = result;
+// });
+
+// decreaseBtn.addEventListener('click', () => {
+//    result--;
+//     counterValue.innerHTML = result;
+// });
