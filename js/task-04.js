@@ -4,12 +4,12 @@ const decrement = document.querySelector('[data-action="decrement"]');
 let result=0;
 
 increment.addEventListener('click', () => {
-    result++;
+    result+=1;
     increment.addEventListener('click', (onResultSpan));
 });
 
 decrement.addEventListener('click', () => {
-   result--;  
+   result-=1;  
    decrement.addEventListener('click', (onResultSpan));
 });
 
