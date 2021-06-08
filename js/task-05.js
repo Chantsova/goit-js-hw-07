@@ -6,10 +6,10 @@ const refs = {
 refs.inputEl.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
-    if (event.currentTarget.value !== '') {
+    if (event.currentTarget.value.trim() !== '') {
     refs.outputEl.textContent = event.currentTarget.value;
 }
-    if (event.currentTarget.value === '') {
-    refs.outputEl.textContent = "Незнакомец";
+    if (event.currentTarget.value.trim() === '') {
+    refs.outputEl.textContent = "незнакомец";
 }
 }
