@@ -1,16 +1,17 @@
 const counterValue = document.querySelector('#value');
 const increment = document.querySelector('[data-action="increment"]');
 const decrement = document.querySelector('[data-action="decrement"]');
-let result=0;
+
+let result = 0;
 
 increment.addEventListener('click', () => {
     result+=1;
-    increment.addEventListener('click', (onResultSpan));
+    increment.addEventListener('click', onResultSpan);
 });
 
 decrement.addEventListener('click', () => {
    result-=1;  
-   decrement.addEventListener('click', (onResultSpan));
+   decrement.addEventListener('click', onResultSpan);
 });
 
 function onResultSpan () {
