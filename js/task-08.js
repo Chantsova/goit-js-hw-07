@@ -5,10 +5,10 @@ const refs = {
     boxesContainer: document.querySelector('#boxes'),
 };
 
-let collection = [];
-
 refs.renderEl.addEventListener('click', createBoxes);
 refs.destroyEl.addEventListener("click", destroyBoxes); 
+
+let collection = [];
 
 function createBoxes(amount) {
     amount = refs.inputEl.value;
