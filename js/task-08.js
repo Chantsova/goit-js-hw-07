@@ -17,14 +17,14 @@ function createBoxes(amount) {
 
     let sizeDiv = 30;
     
-    function getRandomInt(min, max) {
-        return Math.floor(Math.random() * (max - min)) + min;
-    }; 
-
     const divCollection = collection.map((item, idx) => {
         if(idx!==0) {
             sizeDiv += 10;
         };
+        
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }; 
 
         const redColor = getRandomInt(0,255);
         const greenColor = getRandomInt(0,255);
@@ -39,7 +39,7 @@ function createBoxes(amount) {
 
 function destroyBoxes() {
     refs.inputEl.value = '';
-        while (refs.boxesContainer.lastElementChild) {
+    while (refs.boxesContainer.lastElementChild) {
             refs.boxesContainer.removeChild(refs.boxesContainer.lastElementChild);
     };
 };
